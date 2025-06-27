@@ -2,55 +2,42 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Compras</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-    <header></header>
-     <main>
-        <img src="img/bag.png" alt="Sacola de Compra">
+    <main>
+        <img src="./img/bag.png" alt="sacola de compras" />
         <form>
-            <input id="input-item" type="text" placeholder="Digite o item que deseja adicionar">
-            <button id="adicionar-botao" type="button">Salvar Item</button>
+            <input class="input-item" id="input-item" type="text" placeholder="Digite o item que deseja adicionar" />
+            <button class="button-item" id="adicionar-item" type="button">
+                Salvar item
+            </button>
         </form>
-        <ul>   
-            <h2>Lista de Compras</h2>
+
+        <div class="container-lista">
+            <h2>Lista de compras</h2>
             <hr />
-            <li>
-                <div class="item-lista-container">
-                    <div class="container-nome-compra">
-                        <div class="checkbox-container">
-                            <label for="checkbox-1">
-                                <input type="checkbox" class="checkbox-input" id="checkbox-1"/>
-                                <div class="checkbox-customizado checked"></div>
-                            </label>
-                        </div>
 
-                        <p>Ração de Gato</p>
-
+            <ul id="lista-de-compras">
+                <li>
+                    <div class="lista-item-container">
+                        <input type="checkbox" id="checkbox-1" />
+                        <p>Ração de gato</p>
                     </div>
-                    <div>
-                        <button>
-                            <img class="botao-acao" src="img/delete.svg" alt="Deletar">
-                        </button>
-                        <button>
-                            <img class="botao-acao" src="img/edit.svg" alt="Editar">
-                        </button>
-                    </div>
-                </div>
-                <p class="item-lista-texto">Segunda-feira(31/10/2022) ás 08:30</p>
-            </li>
-        </ul>
-
-     </main>
-     <footer></footer>
+                    <p class="texto-data">Segunda-feira (31/10/2022) às 08:30</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
